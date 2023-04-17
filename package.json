@@ -1,0 +1,29 @@
+{
+    "name": "ljt-btn",
+    "version": "1.0.11",
+    "description": "流光按钮",
+    "main": "lib/index.js",
+    "module": "es/index.mjs",
+    "files": [
+        "es",
+        "lib"
+    ],
+    "keywords": [
+        "icon",
+        "流光按钮",
+        "Flowing-button"
+    ],
+    "sideEffects": [
+        "**/*.css"
+    ],
+    "author": "吕江涛",
+    "license": "MIT",
+    "typings": "lib/index.d.ts",
+    "scripts": {
+        "release": "release-it"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/ljt0424/ljt-ui"
+    }
+}

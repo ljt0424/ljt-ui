@@ -1,0 +1,58 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.Flowing-button {
+  position: relative;
+  z-index: 1;
+  font-size: 20px;
+  color: #fff;
+  background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+  background-size: 200%;
+  border-radius: 50px;
+  width: 200px;
+  height: 50px;
+  text-decoration: none;
+  text-align: center;
+  line-height: 50px;
+  border: none;
+}
+.Flowing-button::before {
+  content: '';
+  position: absolute;
+  left: -2px;
+  top: -2px;
+  right: -2px;
+  bottom: -2px;
+  z-index: -1;
+  /* border: 1px solid red; */
+  background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+  background-size: 200%;
+  border-radius: 50px;
+  filter: blur(10px);
+}
+.Flowing-button:hover {
+  animation: sun 3s linear infinite;
+  cursor: pointer;
+}
+.Flowing-button:hover::before {
+  animation: sun 3s linear infinite;
+}
+@keyframes sun {
+  100% {
+    background-position: -400% 0;
+  }
+}
+.Flowing-button.is-disabled {
+  color: #c0c4cc;
+  cursor: not-allowed;
+  background-image: none;
+  background-color: #fff;
+  border-color: #ebeef5;
+}
+.Flowing-button.is-disabled:hover {
+  animation: sun 0s linear 0;
+}
+.Flowing-button.is-disabled:hover::before {
+  animation: sun 0s linear 0;
+}
